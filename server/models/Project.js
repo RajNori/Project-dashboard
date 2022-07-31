@@ -9,6 +9,7 @@ const ProjectSchema = new mongoose.Schema({
   },
   status: {
     type: String,
+    enum:['Planning','In progress','Completed']
   },
 });
 module.exports = mongoose.model('Project', ProjectSchema);

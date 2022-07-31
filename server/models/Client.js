@@ -9,7 +9,6 @@ const ClientSchema = new mongoose.Schema({
   },
   phone: {
     type: String,
-    enum: ['Not Started', 'In Progress', 'Completed'],
   },
   clientId:{
    type:mongoose.Schema.Types.ObjectId,
