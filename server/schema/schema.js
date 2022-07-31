@@ -1,4 +1,4 @@
-const { projects, clients } = require('../sampleData.js');
+const { projects, clients } = require('../sampleData');
 const {
   GraphQLObjectType,
   GraphQLString,
@@ -29,6 +29,7 @@ const RootQuery = new GraphQLObjectType({
     },
   },
 });
+
 module.exports = new GraphQLSchema({
   query: RootQuery,
 });
