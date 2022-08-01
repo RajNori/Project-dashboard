@@ -1,5 +1,7 @@
+const User = require('../models/user')
 const Project = require('../models/Project');
 const Client = require('../models/Client');
+const bcrypt = require('bcryptjs')
 const {
   GraphQLObjectType,
   GraphQLString,
@@ -9,6 +11,16 @@ const {
   GraphQLNonNull,
   GraphQLEnumType,
 } = require('graphql');
+
+//User
+const userType = new GraphQLObjectType({
+  name: 'User',
+  fields:()=>({
+    id: {type:GraphQLID},
+    email:{type:GraphQLString},
+    password:{type:GraphQLString},
+  }),
+})
 
 //Client
 const ClientType = new GraphQLObjectType({
@@ -34,6 +46,7 @@ const ProjectType = new GraphQLObjectType({
       resolve(parent, args) {
         return Client.findById(parent.clientId);
       },
+    
     },
   }),
 });

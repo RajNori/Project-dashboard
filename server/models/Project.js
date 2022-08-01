@@ -18,6 +18,10 @@ const projectSchema = new mongoose.Schema({
     'qa',
     'launch']
   },
+  creator:{
+    type:mongoose.Schema.Types.ObjectId,
+    ref:'User'
+  },
   clientId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Client',
