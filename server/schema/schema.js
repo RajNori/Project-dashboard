@@ -171,40 +171,40 @@ const mutation = new GraphQLObjectType({
       type: ProjectType,
       args: {
         id: { type: new GraphQLNonNull(GraphQLID) },
-        name: { type: GraphQLString },
+        name: { type: GraphQLString},
         description: { type: GraphQLString },
         status: {
           type: new GraphQLEnumType({
             name: 'ProjectStatusUpdate',
             values: {
               start: {
-                value: 'Webste brief',
+                value: 'start',
               },
               planning: {
-                value: 'Planning',
+                value: 'planning',
               },
               ux: {
-                value: 'ui/ux Design and component mapping',
+                value: 'ux',
               },
               content: {
-                value: 'Information Architechture',
+                value: 'content',
               },
               code: {
-                value: 'Coding',
+                value: 'code',
               },
               qa: {
-                value: 'Testing & staging',
+                value: 'qa',
               },
               launch: {
-                value: 'Deployment',
+                value: 'launch',
               },
             },
           }),
         },
       },
       resolve(parent, args) {
-        return (
-          Project.findByIdAndUpdate(args.id),
+        return Project.findByIdAndUpdate(
+            args.id,
           {
             $set: {
               name: args.name,
@@ -213,12 +213,13 @@ const mutation = new GraphQLObjectType({
             },
           },
           { new: true }
+          //tested (manual test) -> passed > *** 
         );
       },
     },
   },
 });
-
+//Tested for CRUD operations. 
 module.exports = new GraphQLSchema({
   query: RootQuery,
   mutation,
