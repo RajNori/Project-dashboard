@@ -12,31 +12,26 @@ const GET_CLIENTS = gql`
     }
   }
 `;
-export default function Clients(client) {
- const {loading, error, data} = useQuery(GET_CLIENTS)
+export default function Clients() {
+ const {loading, error, data} = useQuery(GET_CLIENTS);
 
- if (loading) return <p>Loading ...</p>
- if(error) return <p>Error!</p>
-  return (<>
-  {
-   !loading && !error && (
-
-    <table className='table table-hover mt-3'>
+ return <>{!loading && !error && (
+  <table className='table table-hover mt-3'>
      <thead>
       <tr>
        <th>Name</th>
-       <th>Email</th>
+       <th>email</th>
        <th>Phone</th>
        <th></th>
       </tr>
      </thead>
      <tbody>
-      {data.clients.map((client)=>(
+      {data.clients.map(client=>
+      (
        <ClientRow key={client.id} client={client}></ClientRow>
-      ))}
+      )
+      )}
      </tbody>
-    </table>
-   )
-  }
-  </>)
+    </table>)}
+  </>
 }

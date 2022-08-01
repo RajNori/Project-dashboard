@@ -4,10 +4,10 @@ import {ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import Clients from "./components/Clients";
 
 const client = new ApolloClient({
-  uir:'http://localhost:5000/graphql',
+  uri:'http://localhost:5000/graphql',
   cache: new InMemoryCache()
 });
-
+console.log(Clients.data)
 function App() {
   return (
     <>
