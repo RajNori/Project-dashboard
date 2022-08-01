@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const ProjectSchema = new mongoose.Schema({
+const projectSchema = new mongoose.Schema({
   name: {
     type: String,
   },
@@ -9,11 +9,18 @@ const ProjectSchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    enum:['Planning','In progress','Completed']
+    enum: 
+    ['start', 
+    'planning', 
+    'ux',
+    'content',
+    'Code',
+    'qa',
+    'launch']
   },
-  clientId:{
+  clientId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Client',
-  }
+  },
 });
-module.exports = mongoose.model('Project', ProjectSchema);
+module.exports = mongoose.model('Project', projectSchema);
