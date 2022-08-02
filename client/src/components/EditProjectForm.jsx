@@ -9,13 +9,17 @@ export default function EditProjectForm({project}) {
  const [description, setDescription] = useState(project.description)
  const [status,setStatus] = useState('');
 
- 
+ const [updateProject] = useMutation(UPDATE_PROJECT, {
+  variables: { id: project.id, name, description, status },
+  refetchQueries: [{ query: GET_PROJECT, variables: { id: project.id }}]
+ })
 
 const onSubmit = (e)=>{
 e.preventDefault();
 if(!name || !description || !status){
  return alert('Enter all the details');
 }
+updateProject();
 };
 
   return (

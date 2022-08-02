@@ -18,7 +18,7 @@ export default function AddClientModal() {
 
      cache.writeQuery({
       query:GET_CLIENTS,
-      data:{clients:[...clients,addClient]},
+      data:{clients:[...clients, addClient]},
      });
     },
   });
