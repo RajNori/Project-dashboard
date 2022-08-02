@@ -15,20 +15,19 @@ export default function AddClientModal() {
     update(cache, 
      { data:{ addClient }}){
      const {clients} = cache.readQuery({query:GET_CLIENTS});
-
-     cache.writeQuery({
+      cache.writeQuery({
       query:GET_CLIENTS,
-      data:{clients:[...clients, 
-        addClient]},
+      data:{clients:
+      [clients.concat([addClient])]
+      },
      });
     },
   });
 
   const onSubmit = (e) => {
     e.preventDefault();
-    
-    if(name===''||email===''||phone===''){
-      return alert ('fields cannot be empty');
+  if(name===''||email===''||phone===''){
+  return alert ('fields cannot be empty');
     }
     addClient(name,email,phone);
     setName('');
@@ -52,7 +51,7 @@ export default function AddClientModal() {
       <div
         className='modal fade'
         id='addClientModal'
-        tabindex='-1'
+        // tabindex='-1'
         aria-labelledby='addClientModalLabel'
         aria-hidden='true'
       >

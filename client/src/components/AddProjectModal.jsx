@@ -60,7 +60,7 @@ if(error) return 'Error!'
           <div
             className='modal fade'
             id='addProjectModal'
-            tabindex='-1'
+            // tabindex='-1'
             aria-labelledby='addProjectModalLabel'
             aria-hidden='true'
           >
