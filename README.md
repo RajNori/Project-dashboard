@@ -54,9 +54,11 @@ A simple project management dashboard using React/Graphql&amp;Apollo server
 #### Video
 
 #### Screenshots
+Add client ![addClient](https://user-images.githubusercontent.com/98436665/182351747-99ca4f7e-aaa7-48e9-a8b3-e09815359458.png)
+Add project ![addProject](https://user-images.githubusercontent.com/98436665/182351787-6b7d81c5-d276-4e47-9a88-bb4e1df4d502.png)
+Project status dashboard ![projectScreen](https://user-images.githubusercontent.com/98436665/182351827-f553fb1b-74d9-47de-90b4-188c18ec95fc.png)
 
-Test Screens for manually testing input
-![Form-validation]
+
 #### Usage
 web developers and project manager who manage website and app projects can use the projectio dashboard to keep track of their projects. They can regularly update the project status and clients.
 
