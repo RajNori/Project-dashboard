@@ -172,7 +172,7 @@ const mutation = new GraphQLObjectType({
       type: ProjectType,
       args: {
         id: {
-          type: new GraphQLNonNull(GraphQLID),
+          type: new GraphQLNonNull(GraphQLID)
         },
       },
       resolve(parent, args) {
