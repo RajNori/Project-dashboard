@@ -1,7 +1,7 @@
 import {gql} from '@apollo/client';
 
 const ADD_CLIENT = gql`
-mutation addClient(
+mutation AddClient(
  $name:String!,
  $email:String!,
  $phone:String!){
