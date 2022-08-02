@@ -12,9 +12,10 @@ export default function AddClientModal() {
   const [addClient] = useMutation(ADD_CLIENT, 
    {
     varaibles: { name, email, phone },
-    update:(cache, 
-     { data:{ addClient }})=>{
+    update(cache, 
+     { data:{ addClient }}){
      const {clients} = cache.readQuery({query:GET_CLIENTS});
+
      cache.writeQuery({
       query:GET_CLIENTS,
       data:{clients:[...clients,addClient]},
@@ -23,8 +24,16 @@ export default function AddClientModal() {
   });
 
   const onSubmit = (e) => {
-    e.preventDefault();}
-
+    e.preventDefault();
+    
+    if(name===''||email===''||phone===''){
+      return alert ('fields cannot be empty');
+    }
+    addClient(name,email,phone);
+    setName('');
+    setEmail('');
+    setPhone('');
+  };
   return (
     <>
       <button
