@@ -6,7 +6,7 @@ A simple project management dashboard using React/Graphql&amp;Apollo server
 
 #### Table of contents
 
-- [Deployed App](#https://projectios.herokuapp.com/) . 
+- [Deployed App](https://projectios.herokuapp.com/) . 
 > 🚀 `Please click on the link above to access the deployed app (on Heroku)`☁️
 - [Requirements](#requirements)
 - [Epic](#Epic)
