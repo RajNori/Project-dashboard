@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/header';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import Home from './pages/Home';
@@ -26,7 +26,7 @@ const cache = new InMemoryCache({
 });
 
 const client = new ApolloClient({
-  // to run locally 👨‍💻 ⟠ 👇
+  // URI for development 👨‍💻 ⟠ 👇
   // uri: 'http://localhost:5000/graphql',
 
   // URI for production 🚀 ⟠ 👇 
