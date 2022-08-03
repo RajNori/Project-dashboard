@@ -15,20 +15,12 @@ connectDB();
 
 app.use(cors());
 
-app.use(
-  '/graphql',
-  graphqlHTTP({
-    schema,
-    graphiql: process.env.NODE_ENV === 'development',
+app.use('/graphql', graphqlHTTP({schema:schema,
+  rootvalue:root,
+  graphiql: true,
+  // process.env.NODE_ENV === 'development',
   })
 );
-// alternate syntax
-
-// const root = require('path').join(__dirname, 'server', 'build');
-// app.use(express.static(root));
-// app.get('*', (req, res) => {
-//   res.sendFile('index.html', { root });
-// });
 
 //static folder for serving files in production/deploy to heroku 🚀 ⟠ 👇
 app.use(express.static('client/build'));
