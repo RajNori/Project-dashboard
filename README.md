@@ -56,7 +56,10 @@ A simple project management dashboard using React/Graphql&amp;Apollo server
 #### Video
 
 #### Screenshots
-![addClient](https://user-images.githubusercontent.com/98436665/182547642-94039dcf-fea9-44be-b29d-4c4864abeb1a.png)
+- Adding a client Screen.
+![addClient](https://user-images.githubusercontent.com/98436665/182547642-94039dcf-fea9-44be-b29d-4c4864abeb1a.png). 
+
+Adding a project screen.
 ![addProject](https://user-images.githubusercontent.com/98436665/182547659-e25d0395-f42f-40a2-ae13-6effc225a20f.png)
 
 
