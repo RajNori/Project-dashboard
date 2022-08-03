@@ -22,15 +22,22 @@ app.use(
     graphiql: process.env.NODE_ENV === 'development',
   })
 );
+// alternate syntax
 
-//sttic folder for serving files in production/deploy to heroku 🚀 ⟠ 👇
-app.use(express.static('public'));
+// const root = require('path').join(__dirname, 'server', 'build');
+// app.use(express.static(root));
+// app.get('*', (req, res) => {
+//   res.sendFile('index.html', { root });
+// });
+
+//static folder for serving files in production/deploy to heroku 🚀 ⟠ 👇
+app.use(express.static('client/build'));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+  res.sendFile(path.resolve(__dirname,'client', 'build', 'index.html'));
 });
 // path resolve for serving the index file 🚀 ⟠ 👆
-const port = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 //deployment 🚀 ⟠ 👆
 
-app.listen(port, console.log(`Server running on ${port}`));
+app.listen(PORT, console.log(`Server running on ${PORT}`));
