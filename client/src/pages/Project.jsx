@@ -2,7 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import Spinner from '../components/Spinner';
 import ClientInfo from '../components/ClientInfo';
 import DeleteProjectButton from '../components/DeleteProjectButton';
-import EditProjectForm from '../components/EditProjectForm'
+import EditProjectForm from '../components/EditProjectForm';
 import { useQuery } from '@apollo/client';
 import { GET_PROJECT } from '../queries/projectQueries';
 

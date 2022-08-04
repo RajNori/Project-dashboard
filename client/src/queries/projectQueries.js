@@ -10,7 +10,7 @@ query getProjects{
 }
 `
 const GET_PROJECT = gql `
-query getProjects($id:ID!){
+query getProject($id:ID!){
  project(id:$id){
   id
   name

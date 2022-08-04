@@ -15,10 +15,20 @@ connectDB();
 
 app.use(cors());
 
-app.use('/graphql', graphqlHTTP({schema:schema,
-  rootvalue:root,
-  graphiql: true,
-  // process.env.NODE_ENV === 'development',
+//from express-graphql, recommended settings for production👇  
+// app.use('/graphql', graphqlHTTP({
+//   schema:schema,
+//   rootvalue:root,
+//   graphiql:true,
+//   })
+// );
+
+// My settings👇
+app.use(
+  '/graphql',
+  graphqlHTTP({
+    schema,
+    graphiql: process.env.NODE_ENV === 'development',
   })
 );
 

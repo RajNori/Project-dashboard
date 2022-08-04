@@ -1,4 +1,5 @@
 import {FaEnvelopeOpen, FaPhone, FaIdBadge} from 'react-icons/fa'
+
 export default function ClientInfo({client}) {
   return (
     <>
