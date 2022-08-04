@@ -27,10 +27,10 @@ const cache = new InMemoryCache({
 
 const client = new ApolloClient({
   // URI for development 👨‍💻 ⟠ 👇
-  uri: 'http://localhost:5000/graphql',
+  // uri: 'http://localhost:5000/graphql',
 
   // URI for production 🚀 ⟠ 👇 
-  // uri:'/graphql',
+  uri:'/graphql',
 cache,
 });
 function App() {
@@ -42,7 +42,7 @@ function App() {
           <div className='container'>
            <Routes>
             <Route path='/' element={<Home/>}></Route>
-            <Route path='/project/:id' element={<Project/>}></Route>
+            <Route path='/projects/:id' element={<Project/>}></Route>
             <Route path='*' element={<NotFound/>}></Route>
            </Routes>
           </div>
