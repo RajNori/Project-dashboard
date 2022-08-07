@@ -28,8 +28,6 @@ export default function Project() {
           <ClientInfo client={data.project.client} />
           <EditProjectForm project={data.project} />
           <DeleteProjectButton projectId={data.project.id} />
-        </div>
-      )}
+        </div>)}
     </>
-  );
-}
+    )}
