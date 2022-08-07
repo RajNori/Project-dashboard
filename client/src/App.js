@@ -35,9 +35,10 @@ cache,
 });
 function App() {
   return (
-    <>
+   
       <ApolloProvider client={client}>
         <Router>
+          <>
           <Header />
           <div className='container'>
            <Routes>
@@ -46,9 +47,10 @@ function App() {
             <Route path='*' element={<NotFound/>}></Route>
            </Routes>
           </div>
+          </>
         </Router>
       </ApolloProvider>
-    </>
+   
   );
 }
 

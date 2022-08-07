@@ -5,7 +5,6 @@ import { DELETE_PROJECT } from "../mutations/projectMutations";
 import { GET_PROJECTS } from "../queries/projectQueries";
 import { useMutation } from "@apollo/client";
 
-
 export default function DeleteProjectButton({projectId}) {
  const navigate = useNavigate();
  
