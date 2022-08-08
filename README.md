@@ -44,13 +44,14 @@ A simple project management dashboard using React/Graphql&amp;Apollo server
 
 #### Technologies
 
-- MongoDB
-- Express.js
-- React
-- Node.js
-- GraphQL
-- Apollo 
-- Heroku
+- `Node.js`
+- `Express.js`
+- `MongoDB`
+- `Mongoose` ODM
+- `React`
+- `GraphQL`
+- `Apollo` 
+- `Heroku`
 
 
 #### Video
