@@ -55,6 +55,8 @@ A simple project management dashboard using React/Graphql&amp;Apollo server
 
 #### Video
 
+[Projectio video walkthrough](https://youtu.be/SHL71cvXKtA)
+
 #### Screenshots. 
 
 - Adding a client Screen. 
