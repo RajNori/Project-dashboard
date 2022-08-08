@@ -38,9 +38,9 @@ A simple project management dashboard using React/Graphql&amp;Apollo server
 
 > User story: _INVEST_ framework.
 >
-> - _As a_ project manager, _I want to_ login to the Projectio website, _so I can_ ADD my projects.
-> - _As a_ project manager, _I want to_ login to the Projectio website, _so I can_ EDIT my project progress.
-> - _As a_ project manager, _I want to_ login to the Projectio website, _so I can_ DELETE projects that are no longer relevant.
+> - _As a_ project manager, _I want to_ use the Projectio website, _so I can_ ADD my projects.
+> - _As a_ project manager, _I want to_ use the Projectio website, _so I can_ EDIT my project progress.
+> - _As a_ project manager, _I want to_ use the Projectio website, _so I can_ DELETE projects that are no longer relevant.
 
 #### Technologies
 
