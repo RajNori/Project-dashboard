@@ -8,6 +8,8 @@ A simple project management dashboard using React/Graphql&amp;Apollo server
 
 - [Deployed App](https://projectiosx.herokuapp.com/) . 
 > 🚀 `Please click on the link above to access the deployed app (on Heroku)`☁️
+- [Presentation](https://docs.google.com/presentation/d/1Vw7K2Xb905yRXzld0VxkC8nOW4GV8IqsqkEeF1DYRaU/edit?usp=sharing)
+> Please click on the link above for a view of the presentation slide deck.
 - [Requirements](#requirements)
 - [Epic](#Epic)
 - [User-story](#User-stories)
